@@ -56,9 +56,7 @@ function comparador(event) {
   } else {
     textoInt.innerText = "Errou! Tente novamente!"
   }  
-  
 }
-
 
 function criarCores() {
   
@@ -79,8 +77,6 @@ function reset() {
 
   let textoInt = document.getElementById("answer");
   textoInt.innerText = "Escolha uma cor";
-
-  
 }
 
 
