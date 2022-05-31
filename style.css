@@ -6,6 +6,17 @@ body{
     justify-content: center;
     background-image:url(https://wallpaperaccess.com/full/6127015.jpg)
 }
+#agrupamento{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    border: 1px solid black;
+    margin: 5% 30%;
+    border-radius: 20px;
+    box-shadow: 4px 5px 4px rgb(0 0 0 / 25%);
+    background: linear-gradient(68.15deg, #5b94ff 16.62%, #00cf56 85.61%);
+} 
 #title {
     text-align: center;
     font-family: 'Press Start 2P', cursive
@@ -43,6 +54,12 @@ body{
     text-align: center;  
 }
 #botão{
-   margin: auto;
-   margin-top: 20px;
+   margin: 20px auto;
 }
+#reset-game{
+    background: linear-gradient(68.15deg, #5b94ff 16.62%, #00cf56 85.61%);
+    font-weight: bold;
+    padding: 4px;
+    
+}
+  
