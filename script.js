@@ -52,6 +52,8 @@ function verificadorAcerto(event) {
     textoInt.innerText = "Acertou!" 
     score = score + 3;
     scoreValue.innerText = score;
+    delay
+    
   } else {
     textoInt.innerText = "Errou! Tente novamente!"
   }
@@ -77,3 +79,5 @@ function reset() {
   let textoInt = document.getElementById("answer");
   textoInt.innerText = "Escolha uma cor";
 }
+
+
