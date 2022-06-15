@@ -1,6 +1,6 @@
-# Boas-vindas ao repositório do projeto de adivinhação de Cor
+# Boas-vindas ao repositório do projeto Color Guess
 
-![Tela do Projeto](/tela_colorguess.jpeg)
+![Tela do Projeto](/tela_colorguess.png)
 <br/>
 <br/>
 
