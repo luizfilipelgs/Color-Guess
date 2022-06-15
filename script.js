@@ -1,11 +1,13 @@
 window.onload = iniciando;
 
 function iniciando() {
-  
-  creatBall();
-} 
-let cor 
 
+  creatBall();
+}
+let cor
+let score=0; 
+const scoreValue = document.getElementById("score-value");
+scoreValue.innerText = score;
 
 function creatBall() {
   let sectionBall = document.getElementById('section-ball');
@@ -20,55 +22,52 @@ function creatBall() {
     ball[index].style.backgroundColor = criarCores();
   }
   listeners ();
-  cor = corInicial()
+  cor = corInicial();
 }
 
 function listeners () {
   let ball = document.getElementsByClassName('ball');
   for (let index = 0; index < ball.length; index += 1) {
-    ball[index].addEventListener('click', comparador);
+    ball[index].addEventListener('click', verificadorAcerto);
   }
-  
-} 
+}
 
 function corInicial() {
-  
   let indexAleatorio = Math.floor(Math.random() * 5);
   console.log(indexAleatorio+1);
   let ball = document.getElementsByClassName('ball');
   let corInicial = ball[indexAleatorio].style.backgroundColor;
-  
 
   let textoCorInicial = document.getElementById("rgb-color");
   textoCorInicial.innerText = corInicial;
   return corInicial;
 }
 
-
-function comparador(event) {
+function verificadorAcerto(event) {
   let corTarget = event.target.style.backgroundColor;
   let textoInt = document.getElementById("answer");
   console.log("COR TARGET " + corTarget + "COR INICIAL " + cor);
-  
-  
+
   if (corTarget == cor) {
-    textoInt.innerText = "Acertou!"
+    textoInt.innerText = "Acertou!" 
+    score = score + 3;
+    scoreValue.innerText = score;
   } else {
     textoInt.innerText = "Errou! Tente novamente!"
-  }  
+  }
 }
 
 function criarCores() {
-  
-    let r = Math.floor(Math.random() * 255);
-    let g = Math.floor(Math.random() * 255);
-    let b = Math.floor(Math.random() * 255);
- 
-    return `rgb(${r}, ${g}, ${b})`;
+
+  let r = Math.floor(Math.random() * 255);
+  let g = Math.floor(Math.random() * 255);
+  let b = Math.floor(Math.random() * 255);
+
+  return `rgb(${r}, ${g}, ${b})`;
 }
 
 function reset() {
-  
+
   let ball = document.getElementsByClassName('ball');
   for (let index = 0; index < ball.length; index += 1) {
     ball[index].style.backgroundColor = criarCores();
@@ -78,7 +77,3 @@ function reset() {
   let textoInt = document.getElementById("answer");
   textoInt.innerText = "Escolha uma cor";
 }
-
-
-
-

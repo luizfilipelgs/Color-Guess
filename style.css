@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Press+Start+2P&display=swap');
+
 body{
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 99vw;
     justify-content: center;
     background-image:url(https://wallpaperaccess.com/full/6127015.jpg)
 }
@@ -12,7 +14,7 @@ body{
     flex-direction: column;
     justify-content: center; 
     border: 1px solid black;
-    margin: 5% 30%;
+    margin: 68px 405px 20px 405px;
     border-radius: 20px;
     box-shadow: 4px 5px 4px rgb(0 0 0 / 25%);
     background: linear-gradient(68.15deg, #5b94ff 16.62%, #00cf56 85.61%);
@@ -61,5 +63,25 @@ body{
     font-weight: bold;
     padding: 4px;
     
+}
+#rodapé {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: 5px solid black;
+    /* height: 100px; */
+}
+
+#score {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: auto;
+    align-self: center;
+    text-align: center;
+}
+
+#score h3 {
+    margin: 5px;
 }
   
